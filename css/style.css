@@ -1,0 +1,271 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none; }
+
+/*-----------Inicio de Background------------*/
+.background_image {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 25px);
+  background-size: cover;
+  background-position: center;
+  transition: all 3s ease-out;
+  animation: banner 50s infinite linear; }
+
+/*Estilos para el Banner del Background (Filtro Oscuro y Titulo)*/
+.banner-content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .banner-content h1 {
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+    text-align: center; }
+
+/*Estilo para el Boton de "VER ARTICULOS"*/
+.banner-content a {
+  text-decoration: none;
+  color: #FFF;
+  padding: 9px 20px;
+  border: 1px solid #FFF;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+  font-size: 20px;
+  border-radius: 20px; }
+
+@keyframes banner {
+  0%, 100% {
+    background-image: url("https://res.cloudinary.com/dunlvqhjt/image/upload/v1677281115/Streetwear/Bacground/Hoodies_2_r6ee3d.jpg"); }
+  25% {
+    background-image: url("https://res.cloudinary.com/dunlvqhjt/image/upload/v1677283579/Streetwear/Bacground/T_shirt_2_fo56iw.jpg"); }
+  50% {
+    background-image: url("https://res.cloudinary.com/dunlvqhjt/image/upload/v1677281116/Streetwear/Bacground/jean_q7yrib.jpg"); }
+  75% {
+    background-image: url("https://res.cloudinary.com/dunlvqhjt/image/upload/v1677281115/Streetwear/Bacground/Hoodies_1_oznoqt.jpg"); } }
+
+/*-----------Fin de Background------------*/
+/*-----------Inicio de Footer------------*/
+/*Estilos del Footer = Pie de Pagina*/
+.pie-pagina {
+  width: 100%; }
+
+/*Ajustes para el grupo de columnas*/
+.pie-pagina .grupo {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px; }
+
+/*------------*/
+/*Estilos para los Subtitulos*/
+.pie-pagina .grupo .box h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 25px;
+  font-size: 20px;
+  /*font-family: $font-titulos;*/ }
+
+/*------------*/
+/*Estilos para los Parrafos*/
+.pie-pagina .grupo .box p {
+  color: #1b1b1b;
+  text-align: center; }
+
+/*------------*/
+/*Estilos de los Botones de Redes sociales*/
+.pie-pagina .grupo .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #ffff;
+  margin-right: 10px;
+  background-color: grey;
+  text-align: center;
+  transition: all .3s ease; }
+
+.pie-pagina .grupo .red-social a:hover {
+  background: gray; }
+
+/*------------*/
+/*-----------Fin de Footer------------*/
+/*-----------Inicio de NavBar------------*/
+/*Estilo del Navbar*/
+nav {
+  height: 75px;
+  width: 100%;
+  font-family: montserrat;
+  /*position: absolute;
+  z-index: 2;*/
+  background-color: rgba(0, 0, 0, 0.824); }
+
+/*------------*/
+/*Estilo del Logo de la Navbar*/
+label.logo img {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 220px;
+  height: 55px;
+  border-radius: 25px;
+  cursor: pointer; }
+
+/*------------*/
+/*Estilo del Botones de la Navbar*/
+nav ul {
+  float: right;
+  margin-right: 20px; }
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px; }
+
+/*Estilo para las letras de los botones*/
+nav ul li a {
+  color: #ffff;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  text-transform: uppercase; }
+
+/*------------*/
+/*Estilo para botones seleccionados*/
+a.active, a:hover {
+  background: #212121b3;
+  transition: 1s; }
+
+/*------------*/
+/*Estilo para el boton del menú desplegable*/
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none; }
+
+#check {
+  display: none; }
+
+/*Media Querys Dispositivos Pequeños a partir de 800px de pantalla*/
+@media (max-width: 800px) {
+  .checkbtn {
+    display: block; }
+  /*Menu desplegado para las pantallas tactiles*/
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000000d7;
+    top: 75px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s; }
+  /*------------*/
+  /*Botones para redirigir hacia otra pagina*/
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px; }
+  nav ul li a {
+    font-size: 20px; }
+  a:hover, a.active {
+    background: none;
+    color: #ffff; }
+  #check:checked ~ ul {
+    left: 0; } }
+
+/*------------*/
+/*-----------Fin de NavBar------------*/
+/*-----------Inicio de Cards de Productos-----------*/
+/*Ajustes para el container de la publicacion*/
+.container-products {
+  /*min-height: 100vh;*/
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #efefef;
+  flex-wrap: wrap;
+  margin-top: 25px; }
+
+/*------------*/
+/*Configuracion para la publicacion*/
+.card {
+  background-color: #fff;
+  width: 300px;
+  padding: 15px;
+  margin: 15px; }
+
+/*------------*/
+/*Estilos para las imagenes de la publicacion*/
+.card .imgContainer {
+  width: 100%;
+  height: 350px;
+  border: 1px dashed #ccc;
+  overflow: hidden;
+  position: relative; }
+
+.card .imgContainer img {
+  width: 100%; }
+
+/*------------*/
+/*Desvanecimiento de imagen en publicacion*/
+.card .imgContainer img:nth-child(2) {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s all; }
+
+.card .imgContainer:hover img:nth-child(2) {
+  opacity: 1;
+  top: 0; }
+
+/*------------*/
+.title {
+  font-weight: 500;
+  color: #444; }
+
+.price {
+  font-size: 22px;
+  font-weight: 300; }
+
+.buttongroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px; }
+
+.buttongroup button {
+  border: 0;
+  outline: 0;
+  color: #fff;
+  padding: 10px 20px; }
+
+.buttongroup button.buy {
+  background-color: #1e1e1e;
+  cursor: pointer;
+  border-radius: 20px; }
+
+.buttongroup button.addToCart {
+  background-color: #505050;
+  cursor: pointer;
+  border-radius: 20px; }
+
+/*-----------Fin de Cards de Productos------------*/
