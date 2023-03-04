@@ -1,0 +1,43 @@
+/*-----------Inicio de Informacion de Envios------------*/
+/**/
+.envios{
+    width: 100%;
+    padding: 78px 0px;
+    background-color: rgb(233, 233, 233);
+}
+.main-envio{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.envios-info{
+    width: 550px;
+}
+
+.envios-info h1{
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: $font-titulos;
+}
+
+.envios-info h5{
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: $font-titulos;
+}
+
+.envios-info li{
+    letter-spacing: .5px;
+    line-height: 25px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    font-family: $font-parrafos;
+}
+/*-----------Fin de Informacion de Envios------------*/

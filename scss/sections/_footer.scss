@@ -6,12 +6,13 @@
     /*Ajustes para el grupo de columnas*/
     .pie-pagina .grupo{
       width: 100%;
-      max-width: 1200px;
+      /*max-width: 1200px;*/
       margin: auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 50px;
       padding: 45px 0px;
+      background-color: rgb(255, 255, 255);
     }
     /*------------*/
     /*Estilos para los Subtitulos*/
@@ -20,13 +21,14 @@
         color: black;
         margin-bottom: 25px;
         font-size: 20px;
-        /*font-family: $font-titulos;*/
+        font-family: $font-titulos;
     }
     /*------------*/
     /*Estilos para los Parrafos*/
     .pie-pagina .grupo .box p{
       color: #1b1b1b;
       text-align: center;
+      font-size: 16px;
     }
     /*------------*/
     /*Estilos de los Botones de Redes sociales*/
@@ -47,4 +49,15 @@
         background: gray;
     }
       /*------------*/
+      .red-social{
+        display: flex;
+        justify-content: center;
+      }
+    
+      @media (max-width: 475px){
+        .red-social{
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
 /*-----------Fin de Footer------------*/
